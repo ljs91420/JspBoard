@@ -23,7 +23,7 @@ public class BoardWriteProcess implements WebProcess {
 		// 받은 파라미터로 DB에 글 추가하기
 		JspBoard to_write = new JspBoard().setWrite(request);
 		
-		String sql = "INSERT INTO jspboard(board_id, board_title, board_writer, board_password, board_writer_ip_addr, board_content) VALUES(board_id_seq.nextval, ?, ?, ?, ?, ?)";
+		String sql = "INSERT INTO board(board_id, board_title, board_writer, board_password, board_writer_ip_addr, board_content) VALUES(board_id_seq.nextval, ?, ?, ?, ?, ?)";
 		
 		// 서버 초기화시 만들어 놓은 연결을 꺼내온다.
 		try (
