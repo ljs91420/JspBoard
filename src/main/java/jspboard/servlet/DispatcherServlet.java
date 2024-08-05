@@ -52,7 +52,7 @@ public class DispatcherServlet extends HttpServlet {
 		if (wp != null) {
 			nextView = wp.process(req, resp);
 		} else {
-			resp.sendRedirect(req.getContextPath() + "/notfound");
+			resp.sendRedirect(contextPath + "/notfound");
 			return;
 		}
 		
