@@ -13,6 +13,7 @@ import jspboard.web.WebProcess;
 import jspboard.webprocess.BoardDetailProcess;
 import jspboard.webprocess.BoardEvalProcess;
 import jspboard.webprocess.BoardIndexProcess;
+import jspboard.webprocess.BoardModifyProcess;
 import jspboard.webprocess.BoardWriteFormProcess;
 import jspboard.webprocess.BoardWriteProcess;
 import jspboard.webprocess.NotFoundPageProcess;
@@ -28,6 +29,7 @@ public class DispatcherServlet extends HttpServlet {
 		URI_MAPPING.put("GET:/board/write", new BoardWriteFormProcess());
 		URI_MAPPING.put("POST:/board/write", new BoardWriteProcess());
 		URI_MAPPING.put("GET:/board/detail", new BoardDetailProcess());
+		URI_MAPPING.put("POST:/board/modify", new BoardModifyProcess());
 		URI_MAPPING.put("GET:/board/eval", new BoardEvalProcess());
 		URI_MAPPING.put("GET:/notfound", new NotFoundPageProcess());
 	}
